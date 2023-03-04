@@ -16,10 +16,9 @@ CXXFLAGS := -Wall -Os
 CXXFLAGS += -mmcu=atmega2560 -DF_CPU=16000000  # Arduino MEGA 2560
 CXXFLAGS += $(INC_DIRS)
 
-HDR     :=	binary.h HardwareSerial.h pins_arduino.h Print.h Stream.h WConstants.h wiring.h wiring_private.h \
-		WProgram.h WString.h Wire.h twi.h WCharacter.h
-C_SRC   := pins_arduino.c wiring_analog.c wiring_digital.c wiring_shift.c wiring.c wiring_pulse.c WInterrupts.c twi.c
-CPP_SRC := HardwareSerial.cpp Tone.cpp WString.cpp  Print.cpp  WMath.cpp Wire.cpp
+HDR     :=	Client.h Printable.h USBAPI.h WCharacter.h Arduino.h Stream.h wiring_private.h binary.h HardwareSerial.h IPAddress.h Print.h USBCore.h WString.h HardwareSerial_private.h PluggableUSB.h Server.h Udp.h USBDesc.h
+C_SRC   :=	hooks.c wiring_digital.c WInterrupts.c wiring_analog.c wiring_pulse.c wiring.c wiring_shift.c
+CPP_SRC :=	abi.cpp HardwareSerial3.cpp Stream.cpp WMath.cpp HardwareSerial0.cpp HardwareSerial.cpp IPAddress.cpp Print.cpp USBCore.cpp WString.cpp HardwareSerial1.cpp PluggableUSB.cpp Tone.cpp CDC.cpp HardwareSerial2.cpp main.cpp
 
 OBJ := $(C_SRC:.c=.o) $(CPP_SRC:.cpp=.o)
 

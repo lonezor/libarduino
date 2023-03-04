@@ -18,7 +18,7 @@ CFLAGS=-c $(CFLAGS_HW_CFG) -Wall -Os -I ..
 AVRDUDE_VERBOSITY=
 STRIP=avr-strip
 
-SRC := main.c serial_lcd.c
+SRC := main.c
 INC := 
 
 OBJ := $(SRC:.c=.o)
